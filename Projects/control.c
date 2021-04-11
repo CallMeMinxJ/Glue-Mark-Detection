@@ -1,9 +1,9 @@
 /**
- * @file      main.c
- * @brief     胶痕检测项目主函数
+ * @file      control.c
+ * @brief     关于全局控制相关的函数
  * @author    MINXJ (CallMeMinxJ@outlook.com)
  * @version   0.1
- * @date      2021-03-28
+ * @date      2021-04-11
  * 
  * @copyright Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>
  *            Everyone is permitted to copy and distribute verbatim copies
@@ -15,17 +15,14 @@
 #include "control.h"
 #include "hw_key.h"
 #include "hw_lcd.h"
-#include "menu.h"
+#include "hw_lcd_usart1.h"
 
-int main (void)
+/**
+ * @brief     全局初始化
+ */
+void Global_Init (void)
 {
-	Delay_Init();//延迟函数初始化
-	Global_Init();//全局初始化
-	Nvic_Init();//中断配置
-
-	while(1)
-	{
-		Key_Function(Key_Scan(Mode_Ucnt));
-		Display_Menu(WHITE,RED);
-	} 
+    Key_Init();//按键初始化
+    LCD_Usart1_Init(115200);//设置驱动LCD的串口1的波特率
+    LCD_Init();//LCD屏幕初始化
 }

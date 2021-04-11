@@ -339,7 +339,7 @@
               <MiscControls></MiscControls>
               <Define>STM32F10X_HD,USE_STDPERIPH_DRIVER</Define>
               <Undefine></Undefine>
-              <IncludePath>..\Library\stm32f10x_stdlib\core;..\Library\stm32f10x_stdlib\inc;..\Hardware</IncludePath>
+              <IncludePath>..\Library\stm32f10x_stdlib\core;..\Library\stm32f10x_stdlib\inc;..\Hardware;..\Projects</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -381,6 +381,26 @@
       </TargetOption>
       <Groups>
         <Group>
+          <GroupName>Hardware</GroupName>
+          <Files>
+            <File>
+              <FileName>hw_key.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Hardware\hw_key.c</FilePath>
+            </File>
+            <File>
+              <FileName>hw_lcd.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Hardware\hw_lcd.c</FilePath>
+            </File>
+            <File>
+              <FileName>hw_lcd_usart1.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Hardware\hw_lcd_usart1.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
           <GroupName>Project</GroupName>
           <Files>
             <File>
@@ -393,10 +413,17 @@
               <FileType>1</FileType>
               <FilePath>.\system.c</FilePath>
             </File>
+            <File>
+              <FileName>control.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\control.c</FilePath>
+            </File>
+            <File>
+              <FileName>menu.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\menu.c</FilePath>
+            </File>
           </Files>
-        </Group>
-        <Group>
-          <GroupName>Hardware</GroupName>
         </Group>
         <Group>
           <GroupName>Lib</GroupName>
